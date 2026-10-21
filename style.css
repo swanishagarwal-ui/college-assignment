@@ -1,0 +1,160 @@
+/* ===== Easy-to-edit settings: change these to restyle the whole site ===== */
+:root {
+  --bg: #eef1f6;          /* page background */
+  --surface: #ffffff;     /* cards */
+  --ink: #1b2433;         /* main text */
+  --muted: #55627a;       /* secondary text */
+  --accent: #2f5bff;      /* buttons, links, highlights */
+  --code-bg: #1b2433;     /* code card background */
+  --font-body: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-code: Consolas, "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+a:focus-visible, .button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* ===== Header ===== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+.site-header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+}
+.site-header nav a:hover { color: var(--accent); }
+
+/* ===== Hero ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 46ch; }
+
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+.button:hover { transform: translateY(-2px); }
+
+.hero-side { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.photo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface);
+  box-shadow: 0 0 0 3px var(--accent);
+}
+.photo.placeholder {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.code-card {
+  width: 100%;
+  margin: 0;
+  padding: 20px 22px;
+  background: var(--code-bg);
+  color: #e6ebf5;
+  border-radius: 10px;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+.code-card .k { color: #8fb0ff; }
+.code-card .s { color: #9be3b4; }
+
+/* ===== Projects ===== */
+.projects {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 24px 72px;
+}
+.projects h2, .site-footer h2 { font-size: 1.9rem; margin: 0 0 24px; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.project {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: 10px;
+  border-top: 4px solid var(--accent);
+}
+.project h3 { margin: 0 0 8px; }
+.project p { margin: 0 0 12px; color: var(--muted); }
+.project .tags { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
+.project a { font-weight: 600; }
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--ink);
+  color: #e6ebf5;
+  text-align: center;
+  padding: 48px 24px;
+}
+.site-footer a { color: #8fb0ff; }
+.site-footer small { display: block; margin-top: 24px; color: #9aa6bd; }
+
+/* ===== Mobile ===== */
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; }
+  .site-header nav a { margin-left: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}

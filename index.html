@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swanish Agarwal | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Swanish Agarwal, B.Tech CSE student.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#top">SA</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO / INTRO -->
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <h1>Hi, I'm Swanish Agarwal.</h1>
+        <p class="lead">
+          I'm a first-year B.Tech Computer Science student. I like turning ideas
+          into small programs and websites, and I'm learning something new every week.
+        </p>
+        <a class="button" href="#projects">See my projects</a>
+      </div>
+
+      <div class="hero-side">
+        <!-- Put your photo in this folder and name it profile.jpg -->
+        <img class="photo" src="profile.jpg" alt="Photo of Swanish Agarwal"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo placeholder" aria-hidden="true">SA</div>
+
+        <pre class="code-card" aria-label="Quick facts"><code><span class="k">const</span> me = {
+  name: <span class="s">"Swanish Agarwal"</span>,
+  course: <span class="s">"B.Tech CSE, Year 1"</span>,
+  learning: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"C"</span>, <span class="s">"Git"</span>],
+};</code></pre>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+        <article class="project">
+          <h3>Calculator in C</h3>
+          <p>A command-line calculator that handles basic arithmetic, built to practise functions and switch-case.</p>
+          <p class="tags">C &nbsp;|&nbsp; Functions &nbsp;|&nbsp; Control flow</p>
+          <a href="code/calculator.c" target="_blank">View code</a>
+        </article>
+
+        <article class="project">
+          <h3>Student Marks Tracker</h3>
+          <p>A small program that stores marks for several subjects and prints the total, percentage and grade.</p>
+          <p class="tags">C &nbsp;|&nbsp; Arrays &nbsp;|&nbsp; Loops</p>
+          <a href="code/studentsmarkstracker.c" target="_blank">View code</a>
+        </article>
+
+        <article class="project">
+          <h3>This Portfolio Website</h3>
+          <p>My first website, started with a generative AI tool and then customised by hand with my own content and CSS.</p>
+          <p class="tags">HTML &nbsp;|&nbsp; CSS &nbsp;|&nbsp; GitHub Pages</p>
+          <a href="#top">You are here</a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <h2>Get in touch</h2>
+    <p>
+      Email: <a href="mailto:swanish.agarwal.btech2026@sitpune.edu.in">your.email@example.com</a><br>
+      GitHub: <a href="https://github.com/swanishagarwal-ui" target="_blank" rel="noopener">github.com/your-username</a>
+    </p>
+    <small>&copy; 2026 Swanish Agarwal</small>
+  </footer>
+
+</body>
+</html>
